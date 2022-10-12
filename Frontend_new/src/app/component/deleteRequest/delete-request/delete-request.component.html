@@ -1,0 +1,43 @@
+<div class="form-horizontal">
+    <p class="form-center">Delete Request</p>
+    <form name="form" (ngSubmit)="f.form.valid && delete()" #f="ngForm" novalidate>
+        <div class="form-row">
+            <label class="col-sm-2 col-form-label">TicketId</label>
+            <input name="ticketId" [(ngModel)] = 'form.ticketId' type='number'/>
+        </div>
+        <!-- <div class="form-row">
+            <label class="col-sm-2 col-form-label">CustomerName</label>
+            <input name="customerName" [(ngModel)] = 'form.customerName' readonly/>
+        </div>
+        <div class="form-row">
+            <label class="col-sm-2 col-form-label">Summary</label>
+            <input name="summary" [(ngModel)] = 'form.summary' readonly/>
+        </div>
+        <div class="form-row">
+            <label class="col-sm-2 col-form-label">Status</label>
+            <input name="status" [(ngModel)] = 'form.status' readonly/>
+        </div>
+        <div class="form-row">
+            <label class="col-sm-2 col-form-label">Assigned Group</label>
+            <input name="assignedGroup" [(ngModel)] = 'form.assignedGroup' readonly/>
+        </div>
+        <div class="form-row">
+            <label class="col-sm-2 col-form-label">ServiceType</label>
+            <input name="serviceType" [(ngModel)] = 'form.serviceType' readonly/>
+        </div>
+        <div class="form-row">
+            <label class="col-sm-2 col-form-label">Created Date</label>
+            <input type="createdDate" name="createdDate" [(ngModel)] = 'form.createdDate' readonly/>
+        </div> -->
+        <div class="form-center">
+            <button class="btn btn-primary">Delete</button>
+        </div>
+    </form>
+    <br>
+    <div class="successMessage" *ngIf="errorMessage==''">
+        <label>{{successMessage}}</label>
+    </div>
+    <div class="validationMessage" *ngIf="errorMessage!=''">
+        <label>{{errorMessage}}</label>
+    </div>
+    </div>

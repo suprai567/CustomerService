@@ -1,0 +1,26 @@
+<div *ngIf="customerName!= ''">
+    <p>All Requests of Customers {{customerName}}</p>
+</div>
+<div *ngIf="requests.length>0; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <table class="table table-hover">
+        <thead>
+            <tr class="table-primary">
+                <th *ngFor="let column of displayedColumns">{{column}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-info" *ngFor="let request of requests" (click)="tableRowClicked(request)">
+                <td>{{requests.indexOf(request)+1}}</td>
+                <td>{{request.customerName}}</td>
+                <td>{{request.summary}}</td>
+                <td>{{request.status}}</td>
+                <td>{{request.assignedGroup}}</td>
+                <td>{{request.serviceType}}</td>
+                <td>{{request.createdDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</ng-template>
+<ng-template #elseBlock><label >{{message}}</label></ng-template>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: supra
+Build-Jdk: 17.0.2
+Implementation-Title: CustomerTicket
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.main
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/CustomerTicket
+Created-By: Maven Integration for Eclipse
+
